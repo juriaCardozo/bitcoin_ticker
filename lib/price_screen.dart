@@ -49,7 +49,7 @@ class _PriceScreenState extends State<PriceScreen> {
   }
 
   Widget getPicker(){
-    if(){
+    if(Platform.isIOS){
       return IOSPicker();
     }else{
       return androidDropdownButton();
@@ -92,7 +92,7 @@ class _PriceScreenState extends State<PriceScreen> {
             alignment: Alignment.center,
             padding: EdgeInsets.only(bottom: 30.0),
             color: Colors.lightBlue,
-            child:
+            child: getPicker(),
           ),
         ],
       ),
